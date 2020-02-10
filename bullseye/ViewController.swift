@@ -40,11 +40,11 @@ class ViewController: UIViewController {
   
   func reset(){
     score = 0
-    round = 0
+    round = 1
     targetValue = Int.random(in: 1...100)
     targetLabel.text = String(targetValue)
     scoreLabel.text = String(0)
-    roundLabel.text = String(0)
+    roundLabel.text = String(round)
 
   }
   
@@ -56,8 +56,8 @@ class ViewController: UIViewController {
   
   @IBAction func startOver(_ sender: Any) {
     reset()
-    let message = "Starting over!"
-    let alert = UIAlertController(title: "Starting over",
+    let message = ""
+    let alert = UIAlertController(title: "Starting over!",
                                   message: message,
                                 preferredStyle: .alert)
     
